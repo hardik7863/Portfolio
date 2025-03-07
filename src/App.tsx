@@ -13,27 +13,28 @@ import Certificate from './components/Certificate';
 // Example certificates data - replace with your actual certificates
 const certificates = [
   {
-    title: "Machine Learning Specialization",
-    issuer: "DeepLearning.AI",
-    date: "March 2024",
-    credentialLink: "https://www.coursera.org/verify/specialization/ML",
-    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&auto=format&fit=crop&q=60"
+    title: "Oracle Cloud Infrastructure 2024 Certified Foundations Associate",
+    issuer: "Oracle",
+    date: "February 2025",
+    credentialLink: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=9C43B4CBD8293B75158D8374318B9DF476E17D57C56E8BDC9C8B747FA4106764",
+    image: "https://techno-soft.com/wp-content/uploads/2018/10/oracle-certified-professional.jpg"
   },
   {
-    title: "Deep Learning Professional Certificate",
-    issuer: "IBM",
-    date: "February 2024",
-    credentialLink: "https://www.coursera.org/verify/professional-cert/DL",
-    image: "https://images.unsplash.com/photo-1677442136019-21c1f4b1ec0f?w=800&auto=format&fit=crop&q=60"
+    title: "Oracle Cloud Infrastructure 2024 Data Certified Foundations Associate",
+    issuer: "Oracle",
+    date: "February 2025",
+    credentialLink: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=9C43B4CBD8293B75158D8374318B9DF450E1028B1BF5BF01FA5B356BB3003ADB",
+    image: "https://techno-soft.com/wp-content/uploads/2018/10/oracle-certified-professional.jpg"
   },
   {
-    title: "AI Engineering Certificate",
-    issuer: "Microsoft",
-    date: "January 2024",
-    credentialLink: "https://learn.microsoft.com/verify/AI",
-    image: "https://images.unsplash.com/photo-1677442136019-21c1f4b1ec0f?w=800&auto=format&fit=crop&q=60"
+    title: "Oracle Cloud Infrastructure 2024 Certified AI Foundations Associate",
+    issuer: "Oracle",
+    date: "February 2025",
+    credentialLink: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=B3B21AD3D326ED2EE7829F8F8EE03A7D6D47BA196F600A672272444F9057AECF",
+    image: "https://techno-soft.com/wp-content/uploads/2018/10/oracle-certified-professional.jpg"
   }
 ];
+
 
 function App() {
   const [loading, setLoading] = useState(true);

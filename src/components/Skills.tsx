@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { gsap } from 'gsap';
-import { Database, Server, Code, Brain, Cpu, MessageSquare, Sparkles } from 'lucide-react';
+import { Database, Server, Code, Brain, Cpu, MessageSquare, Sparkles, Settings, Cloud, Activity, Shuffle, Layers } from 'lucide-react';
 
 interface SkillCubeProps {
   icon: React.ReactNode;
@@ -67,38 +67,58 @@ const Skills: React.FC = () => {
   const skillCategories = [
     {
       icon: <Database size={32} />,
-      title: "Data Analysis",
-      skills: ["Python", "Pandas", "NumPy", "SQL", "Data Visualization"]
+      title: "Data Science & Analytics",
+      skills: ["Python", "SQL", "Pandas", "NumPy", "Feature Engineering", "EDA", "Data Cleaning", "Visualization (Matplotlib, Seaborn)"]
     },
     {
       icon: <Server size={32} />,
-      title: "DevOps",
-      skills: ["Docker", "CI/CD", "AWS", "Kubernetes", "Monitoring"]
+      title: "MLOps & DevOps",
+      skills: ["DVC", "MLflow", "Apache Airflow", "Docker", "Kubernetes", "Terraform", "CI/CD (GitHub Actions, Jenkins)"]
     },
     {
       icon: <Code size={32} />,
-      title: "Web Development",
-      skills: ["React", "Node.js", "TypeScript", "REST APIs", "GraphQL"]
+      title: "Web & API Development",
+      skills: ["React.js", "Node.js", "Express.js", "FastAPI", "Flask", "GraphQL", "REST APIs"]
     },
     {
       icon: <Brain size={32} />,
       title: "Machine Learning",
-      skills: ["Scikit-learn", "TensorFlow", "PyTorch", "Model Deployment", "MLOps"]
+      skills: ["Scikit-learn", "XGBoost", "LightGBM", "Hyperparameter Tuning", "Model Evaluation"]
     },
     {
       icon: <Cpu size={32} />,
-      title: "Deep Learning",
-      skills: ["Neural Networks", "CNN", "RNN", "Transformers", "Computer Vision"]
+      title: "Deep Learning & Computer Vision",
+      skills: ["PyTorch", "TensorFlow", "CNN", "RNN", "Transformers", "Image Processing"]
     },
     {
       icon: <MessageSquare size={32} />,
-      title: "NLP",
-      skills: ["Text Processing", "Sentiment Analysis", "Named Entity Recognition", "BERT", "LLMs"]
+      title: "Natural Language Processing",
+      skills: ["Text Processing", "Named Entity Recognition", "BERT", "Sentiment Analysis", "LLMs", "LangChain", "AutoGen"]
     },
     {
       icon: <Sparkles size={32} />,
-      title: "Gen AI",
-      skills: ["Diffusion Models", "GPT", "Prompt Engineering", "Fine-tuning", "RAG"]
+      title: "Generative AI & LLMs",
+      skills: ["GPT Models", "RAG", "Fine-Tuning", "Agentic RAG", "CrewAI", "Diffusion Models", "Prompt Engineering"]
+    },
+    {
+      icon: <Cloud size={32} />,
+      title: "Cloud Computing",
+      skills: ["AWS (SageMaker, S3, EC2)", "GCP (Vertex AI)", "Azure", "Oracle Cloud"]
+    },
+    {
+      icon: <Settings size={32} />,
+      title: "Optimization & Experimentation",
+      skills: ["Bayesian Optimization", "Hyperopt", "Optuna", "A/B Testing"]
+    },
+    {
+      icon: <Activity size={32} />,
+      title: "Big Data & Streaming",
+      skills: ["Apache Kafka", "Spark Streaming", "Data Pipelines", "ETL"]
+    },
+    {
+      icon: <Shuffle size={32} />,
+      title: "Vector Databases & Retrieval",
+      skills: ["FAISS", "Pinecone", "ChromaDB", "AstroDB"]
     }
   ];
 
@@ -119,7 +139,7 @@ const Skills: React.FC = () => {
             My <span className="text-gradient">Skills</span>
           </h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Specialized in various domains of AI and machine learning, with a strong foundation in software development and data science.
+            Specialized in AI, Machine Learning, MLOps, and cloud-based solutions, with expertise in full-stack development and scalable architectures.
           </p>
         </motion.div>
         

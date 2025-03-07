@@ -1,40 +1,45 @@
 import React, { useState, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Send, Mail, MapPin, Phone } from 'lucide-react';
+import emailjs from 'emailjs-com';
 
 const Contact: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(sectionRef, { once: false, amount: 0.1 });
-  
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
   });
-  
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
-  
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
-  
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitSuccess(true);
-      setFormData({ name: '', email: '', message: '' });
-      
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setSubmitSuccess(false);
-      }, 5000);
-    }, 1500);
+
+    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData, 'YOUR_USER_ID')
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        setIsSubmitting(false);
+        setSubmitSuccess(true);
+        setFormData({ name: '', email: '', message: '' });
+
+        // Reset success message after 5 seconds
+        setTimeout(() => {
+          setSubmitSuccess(false);
+        }, 5000);
+      }, (error) => {
+        console.log('FAILED...', error);
+        setIsSubmitting(false);
+      });
   };
 
   return (
@@ -73,7 +78,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold mb-1">Email</h4>
-                  <p className="text-gray-600 dark:text-gray-400">hardik.batwal@example.com</p>
+                  <p className="text-gray-600 dark:text-gray-400">hardikbatwal@gmail.com</p>
                 </div>
               </div>
               
@@ -83,7 +88,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold mb-1">Location</h4>
-                  <p className="text-gray-600 dark:text-gray-400">Bangalore, India</p>
+                  <p className="text-gray-600 dark:text-gray-400">Ratlam, Madhya Pradesh, India</p>
                 </div>
               </div>
               
@@ -93,7 +98,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold mb-1">Phone</h4>
-                  <p className="text-gray-600 dark:text-gray-400">+91 98765 43210</p>
+                  <p className="text-gray-600 dark:text-gray-400">+91 8305647687</p>
                 </div>
               </div>
             </div>
@@ -102,7 +107,7 @@ const Contact: React.FC = () => {
               <h3 className="text-xl font-bold font-display mb-4">Follow Me</h3>
               <div className="flex space-x-4">
                 <a 
-                  href="https://github.com" 
+                  href="https://github.com/hardik7863" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="p-3 bg-gray-100 dark:bg-dark-300 rounded-full text-gray-700 dark:text-gray-300 hover:bg-primary-100 dark:hover:bg-primary-900/30 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
@@ -110,7 +115,7 @@ const Contact: React.FC = () => {
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
                 </a>
                 <a 
-                  href="https://linkedin.com" 
+                  href="www.linkedin.com/in/hardik-batwal-888427239" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="p-3 bg-gray-100 dark:bg-dark-300 rounded-full text-gray-700 dark:text-gray-300 hover:bg-primary-100 dark:hover:bg-primary-900/30 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"

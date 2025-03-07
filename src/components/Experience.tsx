@@ -8,25 +8,18 @@ const Experience: React.FC = () => {
 
   const experiences = [
     {
-      title: "ML Engineer Intern",
-      company: "AI Startup",
-      period: "2023 - Present",
-      description: "Working at a startup for the past 2 months, focusing on developing machine learning models and implementing AI solutions for real-world problems.",
-      skills: ["TensorFlow", "PyTorch", "MLOps", "Data Analysis"]
-    },
-    {
-      title: "Research Assistant",
-      company: "University AI Lab",
-      period: "2022 - 2023",
-      description: "Conducted research on deep learning models for natural language processing and contributed to academic papers.",
-      skills: ["NLP", "Transformers", "Research", "Python"]
-    },
-    {
-      title: "Data Science Intern",
-      company: "Tech Company",
-      period: "2021 - 2022",
-      description: "Analyzed large datasets to extract insights and developed predictive models to solve business problems.",
-      skills: ["Data Analysis", "Machine Learning", "SQL", "Visualization"]
+      title: "AI/ML Intern",
+      company: "AgriTwin.ai (Remote)",
+      period: "November 2024 – Present",
+      description: "Worked on AI-driven agricultural solutions focusing on computer vision, cloud automation, and geospatial analysis.",
+      highlights: [
+        "Developed & deployed a CI/CD pipeline on GCP for automated workflows.",
+        "Implemented image preprocessing techniques (clipping images) to build a structured dataset.",
+        "Performed geospatial analysis: Extracted latitude, longitude, and altitude data from drone images.",
+        "Conducted grass density analysis by generating heatmaps using image processing techniques.",
+        "Collaborated with a cross-functional team to integrate AI-driven solutions for scalable precision farming."
+      ],
+      skills: ["CI/CD", "Google Cloud (GCP)", "Computer Vision", "Geospatial Analysis", "Image Processing", "Python", "MLOps"]
     }
   ];
 
@@ -47,7 +40,7 @@ const Experience: React.FC = () => {
             Work <span className="text-gradient">Experience</span>
           </h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            My professional journey in the field of machine learning and artificial intelligence.
+            Hands-on experience in AI, machine learning, and cloud automation, contributing to real-world projects.
           </p>
         </motion.div>
         
@@ -77,6 +70,11 @@ const Experience: React.FC = () => {
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
                   {exp.description}
                 </p>
+                <ul className="list-disc pl-5 text-gray-600 dark:text-gray-400 mb-4">
+                  {exp.highlights.map((point, idx) => (
+                    <li key={idx}>{point}</li>
+                  ))}
+                </ul>
                 <div className="flex flex-wrap gap-2">
                   {exp.skills.map((skill, skillIndex) => (
                     <span 
