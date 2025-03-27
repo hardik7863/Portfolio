@@ -76,11 +76,6 @@ const Skills: React.FC = () => {
       skills: ["DVC", "MLflow", "Apache Airflow", "Docker", "Kubernetes", "Terraform", "CI/CD (GitHub Actions, Jenkins)"]
     },
     {
-      icon: <Code size={32} />,
-      title: "Web & API Development",
-      skills: ["React.js", "Node.js", "Express.js", "FastAPI", "Flask", "GraphQL", "REST APIs"]
-    },
-    {
       icon: <Brain size={32} />,
       title: "Machine Learning",
       skills: ["Scikit-learn", "XGBoost", "LightGBM", "Hyperparameter Tuning", "Model Evaluation"]
@@ -104,11 +99,6 @@ const Skills: React.FC = () => {
       icon: <Cloud size={32} />,
       title: "Cloud Computing",
       skills: ["AWS (SageMaker, S3, EC2)", "GCP (Vertex AI)", "Azure", "Oracle Cloud"]
-    },
-    {
-      icon: <Settings size={32} />,
-      title: "Optimization & Experimentation",
-      skills: ["Bayesian Optimization", "Hyperopt", "Optuna", "A/B Testing"]
     },
     {
       icon: <Activity size={32} />,
