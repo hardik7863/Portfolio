@@ -9,7 +9,6 @@ interface Project {
   technologies: string[];
   category: string;
   github: string;
-  demo: string;
 }
 
 const Projects: React.FC = () => {
@@ -19,96 +18,73 @@ const Projects: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const projectsPerPage = 6;
   
-  const categories = ['All', 'ML', 'AI', 'DL', 'NLP', 'Gen AI'];
+  const categories = ['All', 'ML', 'DL', 'NLP', 'Gen AI'];
   
   const projects: Project[] = [
     {
-      title: "Sentiment Analysis API",
-      description: "A machine learning API that analyzes text sentiment using BERT models, deployed with FastAPI.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      technologies: ["Python", "BERT", "FastAPI", "Docker"],
-      category: "NLP",
-      github: "https://github.com",
-      demo: "https://demo.com"
-    },
-    {
-      title: "Image Generation App",
-      description: "A web application that generates images from text prompts using diffusion models.",
-      image: "https://images.unsplash.com/photo-1561736778-92e52a7769ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      technologies: ["React", "Stable Diffusion", "TensorFlow", "Flask"],
+      title: "NvidiaNim",
+      description: "A Streamlit application utilizing NVIDIA AI endpoints to analyze U.S. Census documents and respond to queries.",
+      image: "https://logos-world.net/wp-content/uploads/2020/11/Nvidia-Logo-2006-present.jpg",
+      technologies: ["Python", "Streamlit", "NVIDIA AI", "FastAPI"],
       category: "Gen AI",
-      github: "https://github.com",
-      demo: "https://demo.com"
+      github: "https://github.com/hardik7863/NvidiaNim"
+    },    
+    {
+      title: "BlogGenerationAWS",
+      description: "An end-to-end Generative AI application that generates blog posts using AWS Bedrock, AWS Lambda, and Amazon S3.",
+      image: "https://tse4.mm.bing.net/th?id=OIP.6dYTtAjr65H5Yq5UyXVeywHaEE&pid=Api&P=0&h=180",
+      technologies: ["Python", "AWS Lambda", "Amazon Bedrock", "Amazon S3", "API Gateway"],
+      category: "Gen AI",
+      github: "https://github.com/hardik7863/BlogGenerationAWS"
     },
     {
-      title: "Predictive Analytics Dashboard",
-      description: "A dashboard for visualizing and predicting business metrics using machine learning models.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      technologies: ["Python", "Scikit-learn", "React", "D3.js"],
+      title: "AWS Bedrock Project",
+      description: "A generative AI project leveraging AWS Bedrock to build and deploy machine learning models efficiently",
+      image: "https://external-preview.redd.it/amazon-titan-image-generator-multimodal-embeddings-and-text-v0-qhLSGsy8HWZa58LdwaxBVhDtUds3yWPZa5mr-BlQtp0.jpg?auto=webp&s=1dff6ff083dc0ab6106053003d8e7f1e6617d911",
+      technologies: ["Python", "AWS Bedrock", "LangChain", "Streamlit"],
+      category: "Gen AI",
+      github: "https://github.com/hardik7863/AWSBedrock"
+    },    
+    {
+      title: "End-to-End ML Project",
+      description: "A comprehensive machine learning project demonstrating the entire workflow from data preprocessing to model deployment.",
+      image: "https://tse2.mm.bing.net/th?id=OIP.66xwQPBd_elRigZi-Uk5-wHaDU&pid=Api&P=0&h=180",
+      technologies: ["Jupyter Notebook", "Python", "Machine Learning", "Model Deployment"],
       category: "ML",
-      github: "https://github.com",
-      demo: "https://demo.com"
-    },
+      github: "https://github.com/hardik7863/MLProject"
+    }, 
     {
-      title: "Neural Style Transfer",
-      description: "An application that applies artistic styles to images using convolutional neural networks.",
-      image: "https://images.unsplash.com/photo-1579403124614-197f69d8187b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      technologies: ["PyTorch", "CNN", "Flask", "JavaScript"],
+      title: "NLP Text Summarizer",
+      description: "A text summarization tool leveraging NLP techniques and deep learning models to generate concise summaries.",
+      image: "https://tse2.mm.bing.net/th?id=OIP.BWVilnEOOIgwq1qydj36TAHaEK&pid=Api",
+      technologies: ["Python", "NLTK", "Transformers", "Flask"],
+      category: "NLP",
+      github: "https://github.com/hardik7863/NLPTextSummarizer"
+    },    
+    {
+      title: "Next Word Prediction",
+      description: "A deep learning model that predicts the next word in a sentence using LSTM networks.",
+      image: "https://i.ytimg.com/vi/Zn22qt7j2dM/maxresdefault.jpg",
+      technologies: ["Python", "LSTM", "Keras", "Flask"],
       category: "DL",
-      github: "https://github.com",
-      demo: "https://demo.com"
+      github: "https://github.com/hardik7863/NextWordPrediction"
     },
     {
-      title: "Chatbot with RAG",
-      description: "A conversational AI chatbot that uses retrieval-augmented generation for accurate responses.",
-      image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      technologies: ["LangChain", "OpenAI", "Vector DB", "Next.js"],
-      category: "Gen AI",
-      github: "https://github.com",
-      demo: "https://demo.com"
+      title: "Movie Sentiment Analysis",
+      description: "A deep learning model that analyzes and classifies movie reviews based on sentiment using LSTM networks.",
+      image: "https://tse2.mm.bing.net/th?id=OIP.GRNwG60zEGAGWh6DbE-uagHaE6&pid=Api&P=0&h=180",
+      technologies: ["Python", "LSTM", "Keras", "Flask", "NLTK"],
+      category: "DL",
+      github: "https://github.com/hardik7863/MovieSentimentAnaylsis"
     },
     {
-      title: "Object Detection System",
-      description: "Real-time object detection system using YOLO architecture for video streams.",
-      image: "https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      technologies: ["Python", "YOLO", "OpenCV", "TensorFlow"],
-      category: "AI",
-      github: "https://github.com",
-      demo: "https://demo.com"
-    },
-    {
-      title: "Object Detection System",
-      description: "Real-time object detection system using YOLO architecture for video streams.",
-      image: "https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      technologies: ["Python", "YOLO", "OpenCV", "TensorFlow"],
-      category: "AI",
-      github: "https://github.com",
-      demo: "https://demo.com"
-    },{
-      title: "Object Detection System",
-      description: "Real-time object detection system using YOLO architecture for video streams.",
-      image: "https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      technologies: ["Python", "YOLO", "OpenCV", "TensorFlow"],
-      category: "AI",
-      github: "https://github.com",
-      demo: "https://demo.com"
-    },{
-      title: "Object Detection System",
-      description: "Real-time object detection system using YOLO architecture for video streams.",
-      image: "https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      technologies: ["Python", "YOLO", "OpenCV", "TensorFlow"],
-      category: "AI",
-      github: "https://github.com",
-      demo: "https://demo.com"
-    },{
-      title: "Object Detection System",
-      description: "Real-time object detection system using YOLO architecture for video streams.",
-      image: "https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      technologies: ["Python", "YOLO", "OpenCV", "TensorFlow"],
-      category: "AI",
-      github: "https://github.com",
-      demo: "https://demo.com"
-    }
+      title: "Customer Churn Predictor",
+      description: "A deep learning model that predicts customer churn based on historical data using artificial neural networks (ANN).",
+      image: "https://tse3.mm.bing.net/th?id=OIP.43V7Qmu04tyxko1021BSSQHaEK&pid=Api&P=0&h=180",
+      technologies: ["Python", "ANN", "TensorFlow", "Flask"],
+      category: "DL",
+      github: "https://github.com/hardik7863/Ann-Customer-Churn-Predictor"
+    }           
   ];
   
   const filteredProjects = activeCategory === 'All' 
@@ -214,15 +190,6 @@ const Projects: React.FC = () => {
                     >
                       <Github size={16} className="mr-2" />
                       Code
-                    </a>
-                    <a 
-                      href={project.demo} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
-                    >
-                      <ExternalLink size={16} className="mr-2" />
-                      Demo
                     </a>
                   </div>
                 </div>
