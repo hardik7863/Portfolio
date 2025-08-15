@@ -64,53 +64,94 @@ const Skills: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(sectionRef, { once: false, amount: 0.1 });
   
-  const skillCategories = [
-    {
-      icon: <Database size={32} />,
-      title: "Data Science & Analytics",
-      skills: ["Python", "SQL", "Pandas", "NumPy", "Feature Engineering", "EDA", "Data Cleaning", "Visualization (Matplotlib, Seaborn)"]
-    },
-    {
-      icon: <Server size={32} />,
-      title: "MLOps & DevOps",
-      skills: ["DVC", "MLflow", "Apache Airflow", "Docker", "Kubernetes", "Terraform", "CI/CD (GitHub Actions, Jenkins)"]
-    },
-    {
-      icon: <Brain size={32} />,
-      title: "Machine Learning",
-      skills: ["Scikit-learn", "XGBoost", "LightGBM", "Hyperparameter Tuning", "Model Evaluation"]
-    },
-    {
-      icon: <Cpu size={32} />,
-      title: "Deep Learning & Computer Vision",
-      skills: ["PyTorch", "TensorFlow", "CNN", "RNN", "Transformers", "Image Processing"]
-    },
-    {
-      icon: <MessageSquare size={32} />,
-      title: "Natural Language Processing",
-      skills: ["Text Processing", "Named Entity Recognition", "BERT", "Sentiment Analysis", "LLMs", "LangChain", "AutoGen"]
-    },
-    {
-      icon: <Sparkles size={32} />,
-      title: "Generative AI & LLMs",
-      skills: ["GPT Models", "RAG", "Fine-Tuning", "Agentic RAG", "CrewAI", "Diffusion Models", "Prompt Engineering"]
-    },
-    {
-      icon: <Cloud size={32} />,
-      title: "Cloud Computing",
-      skills: ["AWS (SageMaker, S3, EC2)", "GCP (Vertex AI)", "Azure", "Oracle Cloud"]
-    },
-    {
-      icon: <Activity size={32} />,
-      title: "Big Data & Streaming",
-      skills: ["Apache Kafka", "Spark Streaming", "Data Pipelines", "ETL"]
-    },
-    {
-      icon: <Shuffle size={32} />,
-      title: "Vector Databases & Retrieval",
-      skills: ["FAISS", "Pinecone", "ChromaDB", "AstroDB"]
-    }
-  ];
+const skillCategories = [
+  {
+    icon: <Brain size={32} />,
+    title: "Machine Learning",
+    skills: [
+      "Supervised Learning",
+      "Unsupervised Learning",
+      "Time Series Analysis"
+    ]
+  },
+  {
+    icon: <Sparkles size={32} />,
+    title: "Generative AI",
+    skills: [
+      "QA Chatbot",
+      "RAG Application",
+      "Agentic AI",
+      "Multi-Agent System",
+      "Knowledge Graph",
+      "Fine-tuning"
+    ]
+  },
+  {
+    icon: <Code size={32} />,
+    title: "Development & Databases",
+    skills: [
+      "Python",
+      "Flask",
+      "FastAPI",
+      "MySQL",
+      "MongoDB",
+      "Postgres"
+    ]
+  },
+  {
+    icon: <Cpu size={32} />,
+    title: "Deep Learning",
+    skills: [
+      "ANN",
+      "RNN",
+      "LSTM RNN",
+      "Transformer"
+    ]
+  },
+  {
+    icon: <Server size={32} />,
+    title: "MLOps",
+    skills: [
+      "DVC",
+      "Apache Airflow",
+      "MLflow",
+      "BentoML",
+      "Docker",
+      "Dagshub",
+      "AWS",
+      "GCP"
+    ]
+  },
+  {
+    icon: <Layers size={32} />,
+    title: "Libraries",
+    skills: [
+      "Scikit-learn",
+      "Matplotlib",
+      "Seaborn",
+      "NumPy",
+      "Pandas",
+      "Dask"
+    ]
+  },
+  {
+    icon: <Shuffle size={32} />,
+    title: "Frameworks & Tools",
+    skills: [
+      "TensorFlow",
+      "PyTorch",
+      "Neo4jDB",
+      "KuzuDB",
+      "DSPy",
+      "Pydantic",
+      "LangChain",
+      "LlamaIndex",
+      "LangGraph",
+      "CrewAI"
+    ]
+  }
+];
+
 
   return (
     <section 
